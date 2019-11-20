@@ -98,7 +98,6 @@ func mapCSVToStruct(filename string) []Problem {
 	var qa []Problem
 
 	csvFile, err := os.Open(filename)
-
 	if err != nil {
 		log.Fatalln("Could not open the file ", err)
 	}
@@ -107,7 +106,6 @@ func mapCSVToStruct(filename string) []Problem {
 
 	for {
 		row, err := reader.Read()
-
 		if err == io.EOF {
 			break
 		}
